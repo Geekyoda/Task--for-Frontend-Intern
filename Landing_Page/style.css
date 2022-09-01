@@ -1,0 +1,978 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --hue-color: 206;
+  --black-color: hsl(var(--hue-color), 4%, 4%);
+  --black-color-alt: hsl(var(--hue-color), 4%, 8%);
+  --title-color: hsl(var(--hue-color), 4%, 95%);
+  --text-color: hsl(var(--hue-color), 4%, 75%);
+  --text-color-light: hsl(var(--hue-color), 4%, 65%);
+  --white-color: #fff;
+  --body-color: hsl(var(--hue-color), 4%, 6%);
+  --container-color: hsl(var(--hue-color), 4%, 10%);
+  --text-gradient: linear-gradient(
+    hsl(var(--hue-color), 4%, 24%),
+    hsl(var(--hue-color), 4%, 8%)
+  );
+  --scroll-thumb-color: hsl(var(--hue-color), 4%, 16%);
+  --scroll-thumb-color-alt: hsl(var(--hue-color), 4%, 20%);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 5rem;
+  --bigger-font-size: 3.5rem;
+  --big-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --text-line-height: 2rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  max-width: 100%;
+  background-size: contain;
+}
+
+#container_of_header {
+  background-color: #5454d4;
+}
+.container_of_header_navbar {
+  padding: 10px;
+}
+/* Navigation menu */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.Omega {
+  width: 4.438rem;
+  height: 1.75rem;
+  margin: 15rem 3.5rem 0.63rem 1rem;
+  font-size: 1.35rem;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.68px;
+  color: #fff;
+}
+.navbar ul {
+  display: flex;
+  flex-grow: 0;
+  justify-content: space-between;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar ul li a {
+  text-decoration: none;
+}
+.Demo_Pages_Support {
+  width: 12.188rem;
+  height: 1.125rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  text-align: center;
+}
+.Demo {
+  color: #fff;
+}
+.Pages {
+  color: rgba(255, 255, 255, 0.7);
+}
+.Support {
+  color: rgba(255, 255, 255, 0.7);
+}
+.Demos-Pages-Support .text-style-1 {
+  color: rgba(255, 255, 255, 0.861);
+}
+.Cart {
+  justify-content: end;
+  width: 1.688rem;
+  height: 1.125rem;
+  margin-right: 0.688rem;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.45px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn_Three {
+  font-size: 1.2rem;
+  border: 1px solid yellow;
+  background-color: yellow;
+  border-radius: 80%;
+  margin-top: 10px;
+  margin-right: 2rem;
+  cursor:pointer;
+}
+
+/* Section About Product */
+.about_product-price {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+.product_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.Bitmap {
+  width: 22rem;
+  height: 35.625rem;
+  margin-right: 100px;
+  object-fit: contain;
+  background-size: contain;
+}
+.heading_about_headphone {
+  padding-left: 50px;
+}
+.Enjoy-every-single-b {
+  width: 33.5rem;
+  height: 7.875rem;
+  margin: 0 0 0.875rem 0;
+  font-size: 3.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -1.69px;
+  color: #fff;
+}
+.For-iPhone-iPad-an {
+  width: 30.125rem;
+  height: 4.375rem;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: -0.59px;
+  color: rgba(255, 255, 255, 0.765);
+}
+.price_tag {
+  display: grid;
+  flex-basis: 100%;
+  width: 18.125rem;
+  height: 7.375rem;
+  padding: 5px;
+  margin: 1.875rem 15.188rem 1.188rem 0.188rem;
+  border-radius: 9px;
+  background-color: #6565e9;
+  object-fit: contain;
+}
+.flex_Pice_299 {
+  display: flex;
+  justify-content: baseline;
+}
+
+.price_299 {
+  width: 7.375rem;
+  height: 2.063rem;
+  margin: 0 0.75rem 3.063rem 0;
+  font-size: 3.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -1.69px;
+  color: #fff;
+}
+.border_for_offer {
+  margin-top: 2rem;
+}
+.Save-30-today {
+  margin-top: 1rem;
+  width: 7.625rem;
+  height: 2.125rem;
+  padding: 0.5rem 0.563rem 0.5rem 0.813rem;
+  border-radius: 4.5px;
+  color: #fff;
+  background-color: #77bf41;
+}
+.div_Original-price-399 {
+  padding-bottom: 1rem;
+}
+.Original-price-399 {
+  width: 9.438rem;
+  height: 5.063rem;
+  font-size: 1.181rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.09;
+  letter-spacing: -0.83px;
+  color: rgba(255, 255, 255, 0.765);
+}
+.Save-30-today,
+.Original-price-399 {
+  margin-left: 10px;
+}
+.no_of_items_Add_to_cart {
+  display: flex;
+}
+.no_of_items {
+  width: 5.125rem;
+  height: 3.375rem;
+  display: flex;
+  justify-content: space-between;
+  width: 5.125rem;
+  height: 3.375rem;
+  margin: 0.5rem 1.188rem 0 0.188rem;
+  padding: 0 0;
+  border-radius: 4.5px;
+  background-color: #f7f7fb;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.div_items_added {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+.items_added {
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.79);
+}
+.plus_minus_items {
+  display: grid;
+}
+.plus_minus_button {
+  width: 1.5rem;
+  height: 1.688rem;
+  border-radius: 4.5px;
+  padding: 10px;
+  border: none;
+  background: none;
+  line-height: 1;
+  object-fit: contain;
+  cursor:pointer;
+  background-color: #eae9f2;
+}
+.plus_button {
+  
+  font-size: 1.2rem;
+  color: #111;
+  border: 1px solid #eae9f2;
+}
+.minus_button {
+  font-size: 1.2rem;
+  color: #111;
+}
+.div_Add_to_cart {
+  width: 11.25rem;
+  height: 3.375rem;
+  margin: 0.5rem 15.75rem 0 0.088rem;
+  padding: 0.938rem 2.75rem;
+  border-radius: 4.5px;
+  border: solid 0.9px #f0c931;
+  background-color: #fedc5a;
+}
+.Add_to_cart {
+  width: 5.75rem;
+  height: 1.5rem;
+  font-size: 1.181rem;
+  font: bold;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.79);
+}
+
+/* --------- About product section-------------------------- */
+.about_product {
+  width: 100%;
+  height: 500px;
+  display: contents;
+  align-items: center;
+}
+.noice_free {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+}
+.unique_block_about_noice_free {
+}
+.Get-noise-free-sound {
+  width: 27.25rem;
+  height: 7.875rem;
+  font-size: 3.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -1.69px;
+  color: #19191b;
+}
+#Create-custom-landing_noise {
+  width: 29rem;
+  height: 6.563rem;
+  margin: 1.25rem 0 2.313rem 0.188rem;
+  font-size: 1.181rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: -0.59px;
+  color: #696871;
+}
+.unique_block {
+  width: 23rem;
+  height: 5.375rem;
+  margin: 20px;
+  border-radius: 9px;
+  border: solid 0.9px #cdcdcd;
+  background-color: #fff;
+}
+#unique_block1 {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+#unique_block2 {
+  display: flex;
+  padding: 20px;
+}
+
+.cards_pf_image {
+}
+.Oval {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin: 0 0.813rem 0 0;
+  padding: 0.938rem 1.063rem 0.938rem 1.125rem;
+  border-radius: 50%;
+  background-color: rgba(84, 84, 212, 0.1);
+}
+.-Unique-Design-Bl {
+  object-fit: contain;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+
+.-Unique-Design-Bl .text-style-1 {
+  font-weight: normal;
+  color: #696871;
+  margin: -0.07px;
+}
+.Mobile-First-Design {
+  object-fit: contain;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+
+.Mobile-First-Design .text-style-1 {
+  font-weight: normal;
+  color: #696871;
+  margin: -0.91px;
+}
+
+/* --------------About Website--------------- */
+
+.about_website {
+  background-color: #413e65;
+}
+.about_website_content {
+  display: grid;
+  flex-direction: column;
+  grid-gap: 1rem;
+  padding: 80px;
+}
+.everything_content_inside_box {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  flex-direction: unset;
+  margin-left: 50px;
+  padding: 0 100px 0 100px;
+}
+.content_inside_box {
+  display: flex;
+  width: 19.563rem;
+  height: 4.5rem;
+  margin: 10px;
+  padding: 0.75rem 0.688rem 0.625rem 0.875rem;
+  border-radius: 9px;
+  border: solid 0.9px #eae9f2;
+  background-color: #fff;
+  object-fit: contain;
+}
+.box1_content_inside_box {
+  display: grid;
+  justify-content: center;
+}
+.box2_content_inside_box {
+  display: flex;
+  justify-content: center;
+}
+.box3_content_inside_box {
+  display: flex;
+  justify-content: center;
+}
+#Shape_Mobile_First_Design {
+  background-color: rgba(231, 201, 80, 0.1);
+}
+#Shape_Fully_Responsive {
+  background-color: rgba(84, 84, 212, 0.1);
+}
+#Bootstrap_4_Framework {
+  background-color: rgba(240, 64, 55, 0.1);
+}
+#Humanly_Support {
+  background-color: rgba(119, 191, 65, 0.1);
+}
+#Lifetime_Updates {
+  background-color: rgba(215, 11, 0, 0.1);
+}
+
+.Its-everything-you {
+  width: 28.625rem;
+  height: 7.875rem;
+  margin: 0 16.938rem 3.938rem 36.813rem;
+  font-family: CircularStd;
+  font-size: 3.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -1.69px;
+  text-align: center;
+  color: #fff;
+}
+.-Unique-Design-B2 {
+  width: 13.938rem;
+  height: 1.5rem;
+  margin: 0.688rem 0 0.938rem 0.938rem;
+  object-fit: contain;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+.Multiple-Layouts {
+  width: 13.438rem;
+  height: 1.5rem;
+  margin: 0.75rem 0 0.875rem 0.813rem;
+  object-fit: contain;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+.Mobile-First-Design-Copy-2 {
+  width: 13.438rem;
+  height: 1.5rem;
+  margin: 0.75rem 0 0.875rem 0.813rem;
+  object-fit: contain;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+.Fully-Responsive {
+  width: 13.438rem;
+  height: 1.5rem;
+  margin: 0.75rem 0 0.875rem 0.813rem;
+  object-fit: contain;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+.Bootstrap-4-Framewor {
+  width: 13.438rem;
+  height: 1.5rem;
+  margin: 0.75rem 0 0.875rem 0.813rem;
+  object-fit: contain;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+.Humanly-Support {
+  width: 13.438rem;
+  height: 1.5rem;
+  margin: 0.75rem 0 0.875rem 0.813rem;
+  object-fit: contain;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+.Lifetime-Updates {
+  width: 13.438rem;
+  height: 1.5rem;
+  margin: 0.75rem 0 0.875rem 0.813rem;
+  object-fit: contain;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+.Rich-Documentation {
+  width: 13.438rem;
+  height: 1.5rem;
+  margin: 0.75rem 0 0.875rem 0.813rem;
+  object-fit: contain;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+
+/*--------------------------Enjoy your music-------------------- */
+.enjoy_music {
+  background-attachment: fixed;
+}
+.enjoy_music_cointaner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px;
+}
+.Enjoy-your-music {
+  width: 37.25rem;
+  height: 3.938rem;
+  margin: 0 0 1.438rem 0;
+  font-size: 3.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -1.69px;
+  text-align: center;
+  color: #19191b;
+}
+.Create-custom-landing {
+  width: 35.25rem;
+  height: 6.563rem;
+  margin: 1.438rem 1rem 0 0;
+  font-size: 1.181rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: -0.59px;
+  text-align: center;
+  color: #696871;
+}
+img.Rectangle {
+  width: 29.688rem;
+  height: 35rem;
+  margin: 0 0 0 0;
+  object-fit: contain;
+  border-radius: 9px;
+}
+.Flex_img {
+  width: 70rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+img.Rectangle-Copy {
+  width: 59.063rem;
+  height: 35rem;
+  margin: 0 0 0 1.688rem;
+  border-radius: 9px;
+}
+.Create-custom-landin {
+  width: 35.25rem;
+  height: 6.563rem;
+  margin: 1.438rem 1rem 0;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: -0.59px;
+  text-align: center;
+  color: #696871;
+}
+/* ---------------try it Now Section------------------ */
+.tryItNow {
+  width: 100%;
+  background-image: url(img/bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  overflow-x: visible;
+  overflow: visible;
+}
+.try_it_out {
+  padding: 200px;
+}
+.k-people-are-using {
+  width: 29.313rem;
+  height: 7.875rem;
+  margin: 0 0 1.375rem;
+  font-family: CircularStd;
+  font-size: 3.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -1.69px;
+  color: #fff;
+}
+.Create-custom-landingg {
+  width: 28.75rem;
+  height: 6.563rem;
+  margin: 1.375rem 0.563rem 2.5rem 0;
+  font-family: CircularStd;
+  font-size: 1.181rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: -0.59px;
+  color: #fff;
+}
+.btn {
+  width: 11.313rem;
+  height: 3.375rem;
+  margin: 2.5rem 18rem 0 0;
+  border-radius: 4.5px;
+  border: solid 0.9px #f0c931;
+  background-color: #fedc5a;
+}
+.Try-it-now {
+  padding: 10px;
+  width: 11.313rem;
+  height: 1.5rem;
+  font-size: 1.181rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.79);
+}
+/*-------------- what users say-------------*/
+.what_users_say {
+  background-color: #fff;
+}
+.whatUsersSay {
+  padding: 50px 100px 50px 100px;
+}
+.flex_container_whatUsersSay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.What-users-say {
+  width: 29.875rem;
+  height: 3.938rem;
+  margin: 0 11.688rem 0.875rem;
+  font-family: CircularStd;
+  font-size: 3.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -1.69px;
+  text-align: center;
+  color: #19191b;
+}
+.Create-custom-landinggg {
+  width: 29rem;
+  height: 4.375rem;
+  margin: 0.875rem 12.125rem 3.5rem;
+  font-size: 1.181rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: -0.59px;
+  text-align: center;
+  color: #696871;
+}
+.customer_feeback_flex {
+  display: flex;
+  flex-direction: row;
+}
+.customer_feedback {
+  width: 25.75rem;
+  height: 14.188rem;
+  margin: 20px;
+  padding: 1.438rem 1.563rem 1.563rem 1.5rem;
+  border-radius: 9px;
+  border: solid 0.9px #eae9f2;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.OMG-I-cannot-believ {
+  width: 22.688rem;
+  height: 6.563rem;
+  margin: 0 0 1.563rem;
+  font: bolder;
+  font-weight: 525;
+  font-size: 1.181rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: -0.59px;
+  color: black;
+}
+
+.customer_details1 {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+img.PHOTO {
+  width: 2.313rem;
+  height: 2.313rem;
+}
+.Jonathan-Taylor {
+  margin-left: 1rem;
+  margin-bottom: -10px;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+.CEO-at-Creativex {
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.45px;
+  color: #696871;
+}
+.Marie-Stanley {
+  margin-left: 1rem;
+  margin-bottom: -10px;
+  font-size: 1.181rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  color: #19191b;
+}
+.Digital-Marketer-Wr {
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.45px;
+  color: #696871;
+}
+
+.flex_Rectangle-Copy1_slide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Rectangle-Copy1_slide {
+  width: 2.563rem;
+  height: 0.438rem;
+  margin: 0 0.563rem 0 0;
+  border-radius: 3.6px;
+  background-color: #5454d4;
+}
+
+.Rectangle-Copy2_slide {
+  width: 1.463rem;
+  height: 0.438rem;
+  margin: 0 0.563rem 0 0;
+  border: 1px solid black;
+  border-radius: 3.6px;
+}
+.Rectangle-Copy3_slide {
+  width: 1.463rem;
+  height: 0.438rem;
+  margin: 0 0.563rem 0 0;
+  border: 1px solid black;
+  border-radius: 3.6px;
+}
+/* 
+----------------------buy now =-----------------*/
+.buy_now {
+  background-color: #6464c8;
+}
+.buyNow {
+  padding: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.Enjoy-every-beat-Ge {
+  width: 46.438rem;
+  height: 7.875rem;
+  margin: 0 4.75rem 0 10rem;
+  font-size: 3.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -1.69px;
+  color: #fff;
+}
+
+.Click_buy_now {
+  margin-left: 30px;
+}
+.Buy-now {
+  width: 11.313rem;
+  height: 1.5rem;
+  font-family: CircularStd;
+  font-size: 1.381rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.59px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.79);
+}
+/* ----------------Footer------------ */
+footer {
+  background-color: #fff;
+}
+.ABout_company {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_Omega {
+  width: 4.438rem;
+  height: 1.75rem;
+  margin-left: 200px;
+  font-size: 1.95rem;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.68px;
+  color: #19191b;
+}
+.Support-Privacy-Poli {
+  display: flex;
+  justify-content: space-between;
+  width: 27.438rem;
+  height: 2.125rem;
+  margin: 0 1.438rem 0 13.125rem;
+  font-size: 0.9rem;
+  font: bold;
+  font-weight: 550;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.38;
+  letter-spacing: 0.45px;
+  text-align: center;
+  color: #000000;
+}
+.-\32 020-UXTheme-All {
+  width: 16.063rem;
+  height: 2.125rem;
+  margin: 0 0 0 1.438rem;
+  font-size: 0.9rem;
+  font: bolder;
+  font-weight: 550;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.38;
+  letter-spacing: -0.45px;
+  text-align: right;
+  color: #19191b;
+}
