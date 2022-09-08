@@ -7,7 +7,6 @@
 }
 :root {
   --header-height: 3rem;
-
   /*========== Colors ==========*/
   --hue-color: 206;
   --black-color: hsl(var(--hue-color), 4%, 4%);
@@ -427,10 +426,15 @@ img.Bitmap {
 
 .about_website {
   background-color: #413e65;
+  background-size: contain;
+  
+  
 }
 .about_website_content {
-  display: grid;
+  /* display: grid; */
   flex-direction: column;
+  display: contents;
+  align-items: center;
   grid-gap: 1rem;
   padding: 80px;
 }
@@ -438,6 +442,7 @@ img.Bitmap {
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
+  
   flex-direction: unset;
   margin-left: 50px;
   padding: 0 100px 0 100px;
@@ -482,10 +487,9 @@ img.Bitmap {
 }
 
 .Its-everything-you {
-  width: 28.625rem;
+  width: 35.625rem;
   height: 7.875rem;
-  margin: 0 16.938rem 3.938rem 36.813rem;
-  font-family: CircularStd;
+  margin-left: 700px;
   font-size: 3.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -610,7 +614,8 @@ img.Bitmap {
 
 /*--------------------------Enjoy your music-------------------- */
 .enjoy_music {
-  background-attachment: fixed;
+  background-size: contain;
+
 }
 .enjoy_music_cointaner {
   display: flex;
@@ -888,11 +893,13 @@ img.PHOTO {
 ----------------------buy now =-----------------*/
 .buy_now {
   background-color: #6464c8;
+  background-size: contain;
+  background-position: 1fr;
 }
 .buyNow {
   padding: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .Enjoy-every-beat-Ge {
